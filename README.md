@@ -2,7 +2,7 @@
 
 ## Le challenge
 
-Création d'un slider avec lecture automatique et lecture manuelle
+Création d'un carrousel d'images élégant et interactif avec lecture automatique et lecture manuelle en HTML5, CSS3 et JavaScript.
 
 ## Démonstration
 
