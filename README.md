@@ -6,7 +6,7 @@ Création d'un slider avec lecture automatique et lecture manuelle
 
 ## Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/national_geographic_slider/
 
 ## Développez avec
 
