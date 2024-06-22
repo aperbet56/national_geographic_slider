@@ -77,14 +77,11 @@ body {
     margin: 0 0.2rem;
 }
 
-.nav__list.divider {
-    border-left: 0.2rem solid var(--text-light);
-}
-
 .nav__link {
     color: var(--text-light);
-    padding: 0 1rem;
+    padding: 1rem;
     transition: color 0.3s ease-in-out,
+                border-radius 0.3s ease-in-out,
                 background-color 0.3s ease-in-out;
 }
 
@@ -97,6 +94,7 @@ body {
 .nav__link:hover {
    color: var(--dark);
    background-color: var(--active-thumb);
+   border-radius: 5px;
 }
 
 .hero__content {
