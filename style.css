@@ -21,7 +21,6 @@
     --m-auto: 0 auto;
     --text-light: rgba(255, 255, 255, 0.9);
     --text-dark: rgba(255, 255, 255, 0.5);
-    --devider: rgba(255, 255, 255, 0.4);
     --active-thumb: #ffcc00;
     --dark: #0d0427;
 }
@@ -37,10 +36,6 @@ body {
     min-height: 100vh;
     font-size: 1.6rem;
 }
-
-/*::-webkit-scrollbar {
-    width: 0;
-}*/
 
 .container {
     max-width: var(--container);
@@ -85,16 +80,16 @@ body {
                 background-color 0.3s ease-in-out;
 }
 
+.nav__link:hover {
+    color: var(--dark);
+    background-color: var(--active-thumb);
+    border-radius: 5px;
+}
+
 .nav__link.img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.nav__link:hover {
-   color: var(--dark);
-   background-color: var(--active-thumb);
-   border-radius: 5px;
 }
 
 .hero__content {
@@ -186,16 +181,55 @@ body {
       line-height: 6rem;
     }
 
+    .navigation {
+        width: 100%;
+    }
+
     .menu__toggle {
       cursor: pointer;
+      display: block;
+      margin-left: auto;
     }
 
     .menu__toggle img {
         width: 3rem;
     }
-
+    
     .nav__menu {
-      display: none;
+        display: none;
+    }
+    
+    .nav__menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        position: absolute;
+        margin: 0 20px;
+        top: 100px;
+        left: 0;
+        width: calc(100% - 40px);
+        padding: 15px;
+        z-index: 1;
+        background-color: var(--active-thumb);
+    }
+
+    /**** Pour dessiner le menu burger ****/
+
+    .nav__menu::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background-color: var(--active-thumb);
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+
+    .nav__link:hover {
+        background-color: var(--text-dark);
     }
 
     .slider__controler {
