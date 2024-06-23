@@ -2,7 +2,7 @@
 
 ## Le challenge
 
-Création d'un carrousel d'images élégant et interactif avec lecture automatique et lecture manuelle en HTML5, CSS3 et JavaScript.
+Création d'un carrousel d'images élégant et interactif avec lecture automatique et lecture manuelle en HTML5, CSS3 et JavaScript. Navigation en menu burger en version mobile.
 
 ## Démonstration
 
