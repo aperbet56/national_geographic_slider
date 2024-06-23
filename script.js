@@ -3,6 +3,9 @@ const titleItem = document.querySelector(".title");
 const timeItem = document.querySelector(".actions .text-secondary");
 const heroItem = document.querySelector("#hero");
 const sliderControler = document.querySelector(".slider__controler");
+const menuBtn = document.querySelector(".menu__toggle");
+const mobileNav = document.getElementsByClassName("nav__menu")[0];
+const navLinks = [...document.querySelectorAll(".nav__link")];
 
 // Création de la variable slides qui va stocker les slides
 let slides = [
@@ -120,3 +123,21 @@ thumbs.forEach((thumb, index) => {
     }, 500);
   });
 });
+
+// Déclaration de la fonction toggleNav pour activer /désactiver la navigation mobile
+const toggleNav = () => {
+  mobileNav.classList.toggle("active");
+};
+
+// Ecoute de l'événement click sur le menu burger et appel de la fonction toggleNav
+menuBtn.addEventListener("click", toggleNav);
+
+navLinks.forEach((nav) =>
+  // Ecoute de l'événement click
+  nav.addEventListener("click", (e) => {
+    // Évite que l'évènement courant ne se propage plus loin dans les phases de capture et de déploiement.
+    e.stopPropagation();
+    // Apeel de la fonction toggleNav
+    toggleNav();
+  })
+);
