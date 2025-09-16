@@ -1,10 +1,10 @@
 ## NATIONAL GEOGRAPHIC SLIDER
 
+![Design preview for the project](./img/banner-3.png)
+
 ![Design preview for the project](./img/banner-1.png)
 
 ![Design preview for the project](./img/banner-2.png)
-
-![Design preview for the project](./img/banner-3.png)
 
 ## Le challenge
 
