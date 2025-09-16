@@ -1,5 +1,11 @@
 ## NATIONAL GEOGRAPHIC SLIDER
 
+![Design preview for the project](./img/banner-1.png)
+
+![Design preview for the project](./img/banner-2.png)
+
+![Design preview for the project](./img/banner-3.png)
+
 ## Le challenge
 
 Création d'un carrousel d'images élégant et interactif avec lecture automatique et lecture manuelle en HTML5, CSS3 et JavaScript. Navigation en menu burger en version mobile.
