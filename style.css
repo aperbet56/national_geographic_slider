@@ -274,7 +274,7 @@ body {
         background-color: var(--active-thumb);
     }
 
-    .slider__thumb.active::before {
+    .slider__thumb.active .indicator {
         display: none;
     }
 
