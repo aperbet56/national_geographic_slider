@@ -8,7 +8,7 @@
 
 ## Le challenge
 
-Création d'un carrousel d'images élégant et interactif avec lecture automatique et lecture manuelle en HTML5, CSS3 et JavaScript. Navigation en menu burger en version mobile.
+Création d'un carrousel d'images élégant et interactif avec lecture automatique et lecture manuelle en HTML5, CSS3 et JavaScript. Navigation sous forme de menu burger en version mobile.
 
 ## Démonstration
 
@@ -18,8 +18,9 @@ Lien vers le projet : https://aperbet56.github.io/national_geographic_slider/
 
 - Utilisation des balises sémantiques HTML5
 - CSS3
+- Variables css
 - Flexbox
-- Animations CSS
+- Animations CSS (transion, @keyframes)
 - Desktop first
 - Page web responsive
 - Importation de la police "Poppins"
