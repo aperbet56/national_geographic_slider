@@ -7,8 +7,8 @@ const menuBtn = document.querySelector(".menu__toggle");
 const mobileNav = document.getElementsByClassName("nav__menu")[0];
 const navLinks = [...document.querySelectorAll(".nav__link")];
 
-// Création de la variable slides qui va stocker les slides
-let slides = [
+// Création de la constante slides qui va stocker les slides
+const slides = [
   {
     title: "Méduse exotique",
     image: "img/slide-1.png",
@@ -40,20 +40,25 @@ let slides = [
     },
   },
 ];
+
 // Création de la variable currentIndex
 let currentIndex = 0;
 
+// Pour chaque slide
 slides.forEach((slide, index) => {
   let { thumb } = slide;
-  // Création d'un élément HTML div
+  // Création d'un élément HTML5 div
   const thumbItem = document.createElement("div");
   thumbItem.classList.add("slider__thumb");
+  thumbItem.classList.remove("active");
+
   if (index === 0) {
     thumbItem.classList.add("active");
   }
   // Mise en place de la structure HTML
   thumbItem.innerHTML = `
     <div class="slider__thumb--left">
+              <div class="indicator"> </div>
               <h2>${thumb.number}</h2>
             </div>
             <div class="slider__thumb--right">
@@ -68,6 +73,7 @@ slides.forEach((slide, index) => {
 
 // Récupération de la div ayant la classee slider__thumb
 const thumbs = document.querySelectorAll(".slider__thumb");
+
 // Création de la variable animationInterval et de la constante interval
 let animationInterval;
 const interval = 6000; // 6s
@@ -79,7 +85,7 @@ const updateSlide = (index) => {
   timeItem.textContent = time;
   heroItem.style.transition = "background 0.5s ease-in-out";
   heroItem.style.background = `url("${image}") no-repeat top/cover`;
-  //heroItem.offsetHeight;
+  // Pour chaque thumb
   thumbs.forEach((thumb) => {
     thumb.classList.remove("active");
   });
@@ -92,9 +98,18 @@ const startAnimation = () => {
   // La méthode setInterval() appelle à plusieurs reprises une fonction ou exécute un extrait de code, avec un délai fixe entre chaque appel.
   // Cette méthode renvoie un ID d'intervalle qui identifie de manière unique l'intervalle
   animationInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    // Appel de la fonction updateSlides
-    updateSlide(currentIndex);
+    thumbs[currentIndex].classList.remove("active");
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      // Appel de la fonction updateSlide(currentIndex)
+      updateSlide(currentIndex);
+    } else {
+      currentIndex = 0;
+      // Appel de la fonction updateSlide(currentIndex)
+      updateSlide(currentIndex);
+    }
+    //console.log(currentIndex);
+    thumbs[currentIndex].classList.add("active");
   }, interval);
 };
 
@@ -120,7 +135,7 @@ thumbs.forEach((thumb, index) => {
       stopAnimation();
       // Appel de la fonction startAnimation
       startAnimation();
-    }, 500);
+    }, 0);
   });
 });
 
