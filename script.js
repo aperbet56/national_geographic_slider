@@ -83,6 +83,7 @@ const updateSlide = (index) => {
   let { title, time, image, thumb } = slides[index];
   titleItem.textContent = title;
   timeItem.textContent = time;
+  heroItem.setAttribute("loading", "lazy");
   heroItem.style.transition = "background 0.5s ease-in-out";
   heroItem.style.background = `url("${image}") no-repeat top/cover`;
   // Pour chaque thumb
